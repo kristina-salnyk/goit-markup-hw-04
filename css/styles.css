@@ -286,6 +286,9 @@ img {
   padding-bottom: 25px;
   margin-bottom: 30px;
   text-align: center;
+
+  border-radius: 4px;
+  background-color: var(--element-bgr-color);
 }
 
 .contacts-list-item a {
