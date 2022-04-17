@@ -13,6 +13,7 @@
   --footer-bgr-color: #2f303a;
   --accent-bgr-color: #188ce8;
   --element-bgr-color: #f5f4fa;
+  --icon-bgr-color: #afb1b8;
 
   --accent-color: #2196f3;
   --border-color: #ececec;
@@ -168,11 +169,21 @@ img {
 
 /* Hero */
 .hero {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
 
-  background: var(--hero-bgr-color);
+  background-color: var(--hero-bgr-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/team.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -234,6 +245,64 @@ img {
   line-height: 1.71;
 }
 
+.features-list-item .item-svg {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.features-list-item svg {
+  height: 70px;
+  width: 70px;
+}
+
+.contacts-list-item a {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-list-item svg {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.envelope {
+  height: 12px;
+  width: 16px;
+}
+
+.smartphone {
+  height: 16px;
+  width: 10px;
+}
+
+/* .features-list-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+}
+
+.antenna-svg::before {
+  background-image: url('../images/antenna.svg');
+}
+
+.clock-svg::before {
+  background-image: url('../images/clock.svg');
+}
+
+.diagram-svg::before {
+  background-image: url('../images/diagram.svg');
+}
+.astronaut-svg::before {
+  background-image: url('../images/astronaut.svg');
+} */
+
 /* Directions & Team*/
 .directions {
   padding-top: 0;
@@ -287,6 +356,53 @@ img {
   font-weight: 500;
   font-size: 16px;
 }
+
+.team-list-item .item-descr {
+  margin-bottom: 16px;
+}
+
+.social-links-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+}
+
+.social-links-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-links-list-item {
+  color: var(--icon-bgr-color);
+  background-color: var(--primary-bgr-color);
+}
+
+.social-links-list a {
+  color: inherit;
+}
+
+.social-links-list svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social-links-list-item:hover,
+.social-links-list-item:focus {
+  color: var(--white-text-color);
+  background-color: var(--accent-color);
+}
+
+/* .team-list-item svg:hover {
+  fill: var(--accent-color);
+} */
 
 /* Portfolio */
 .portfolio-tabs-list {
