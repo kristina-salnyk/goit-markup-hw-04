@@ -183,6 +183,10 @@ img {
   color: var(--title-text-color);
 }
 
+.main-nav-list .current {
+  color: var(--accent-color);
+}
+
 .contacts-list {
   margin-left: auto;
 }
@@ -194,13 +198,15 @@ img {
 .contacts-list a {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: block;
+  display: flex;
+  align-items: center;
 
   color: var(--primary-text-color);
 }
 
-.main-nav-list .current {
-  color: var(--accent-color);
+.contacts-list-item svg {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* Hero */
@@ -282,23 +288,17 @@ img {
 }
 
 .features-list-item .item-svg {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  width: 270px;
+  height: 120px;
   margin-bottom: 30px;
   text-align: center;
 
-  border-radius: 4px;
-  background-color: var(--element-bgr-color);
-}
-
-.contacts-list-item a {
   display: flex;
   align-items: center;
-}
+  justify-content: center;
 
-.contacts-list-item svg {
-  margin-right: 10px;
-  fill: currentColor;
+  border-radius: 4px;
+  background-color: var(--element-bgr-color);
 }
 
 /* .features-list-item::before {
@@ -398,10 +398,14 @@ img {
 }
 
 .clients-list-item a {
-  display: block;
-  padding: 15px 32px;
-  border-radius: 4px;
+  width: 170px;
+  height: 92px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
   border: 1px solid var(--icon-fill-color);
   color: var(--icon-fill-color);
 }
@@ -486,21 +490,28 @@ img {
   line-height: 1.88;
 }
 
-.projects-list-item:hover,
-.projects-list-item:focus {
+.projects-list a {
+  display: block;
+  color: inherit;
+}
+
+.projects-list a:hover,
+.projects-list a:focus {
   box-shadow: 0px 1px 1px var(--card-shadow-color-param-1),
     0px 4px 4px var(--card-shadow-color-param-4), 1px 4px 6px var(--card-shadow-color-param-5);
 }
 
 /* Footer */
 .page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background: var(--footer-bgr-color);
 }
 
 .page-footer .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
   display: flex;
+  align-items: baseline;
 }
 
 .page-footer .logo {
@@ -526,10 +537,6 @@ img {
 
 .contacts {
   margin-right: 70px;
-}
-
-.connect-links {
-  padding-top: 12px;
 }
 
 .connect-links-title {
